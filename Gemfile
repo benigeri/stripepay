@@ -21,7 +21,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem "devise", ">= 2.1.2"
+gem "cancan", ">= 1.6.8"
+gem "rolify", ">= 3.2.0"
+gem "simple_form", ">= 2.0.4"
+gem "quiet_assets", ">= 1.0.1", :group => :development
+gem "better_errors", ">= 0.2.0", :group => :development
+gem "binding_of_caller", ">= 0.6.8", :group => :development
+gem "figaro"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
