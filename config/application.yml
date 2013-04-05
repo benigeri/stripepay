@@ -1,6 +1,7 @@
 GMAIL_USERNAME: me@benigeri.com
 GMAIL_PASSWORD: changeme
-ADMIN_NAME: Paul Benigeri
+ADMIN_FIRST_NAME: Paul 
+ADMIN_LAST_NAME: Benigeri
 ADMIN_EMAIL: me@benigeri.com
 ADMIN_PASSWORD: changeme
 ROLES: [admin, user, VIP]
