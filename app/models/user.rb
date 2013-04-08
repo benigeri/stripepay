@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :stripe_token, :coupon
 
-  #before_save :update_stripe
+  before_save :update_stripe
   
   def update_stripe
     return if email.include?(ENV['ADMIN_EMAIL'])
