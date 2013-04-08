@@ -1,1 +1,26 @@
-<h3>Home</h3>
+<div>
+  <div>
+    <div class="plan"><h2>Silver</h2></div>
+    <ul>
+      <li>Silver plan</li>
+    </ul>
+    <h3>$9,999/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver') %>
+  </div>
+  <div>
+    <div><h2>Gold</h2></div>
+    <ul >
+      <li>Gold plan</li>
+    </ul>
+    <h3>$99,999/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold') %>
+  </div>
+  <div>
+    <div><h2>Platinum</h2></div>
+    <ul>
+      <li>Platinum</li>
+    </ul>
+    <h3>$999,999/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum') %>
+  </div>
+</div>

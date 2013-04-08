@@ -9,10 +9,10 @@ puts 'user: ' << user.first_name
 user.add_role :admin
 user2 = User.find_or_create_by_email :first_name => 'Second', :last_name => 'User', :email => 'user2@example.com', :password => 'changeme', :password_confirmation => 'changeme'
 puts 'user: ' << user2.first_name
-user2.add_role :VIP
+user2.add_role :silver
 user2 = User.find_or_create_by_email :first_name => 'Apple', :last_name => 'John', :email => 'user3@example.com', :password => 'changeme', :password_confirmation => 'changeme'
 puts 'user: ' << user2.first_name
-user2.add_role :VIP
+user2.add_role :gold
 user2 = User.find_or_create_by_email :first_name => 'Pear', :last_name => 'Dog', :email => 'user4@example.com', :password => 'changeme', :password_confirmation => 'changeme'
 puts 'user: ' << user2.first_name
-user2.add_role :VIP
+user2.add_role :platinum
