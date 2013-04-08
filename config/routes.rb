@@ -1,4 +1,6 @@
 Gigablab::Application.routes.draw do
+  mount StripeEvent::Engine => '/stripe'
+
   get "plans/silver"
   get "plans/gold"
   get "plans/platinum"

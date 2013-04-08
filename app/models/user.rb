@@ -17,14 +17,14 @@ class User < ActiveRecord::Base
 
   before_save :update_stripe
   before_destroy :cancel_subscription
-  
+
   def update_stripe
     return if email.include?(ENV['ADMIN_EMAIL'])
     return if email.include?('@example.com') and not Rails.env.production?
     if customer_id.nil?
       if !stripe_token.present?
         raise "Stripe token not present. Can't create account."
-      end
+      end 
       if coupon.blank?
         customer = Stripe::Customer.create(
           :email => email,
@@ -89,5 +89,11 @@ class User < ActiveRecord::Base
     errors.add :base, "Unable to cancel your subscription. #{e.message}."
     false
   end
+
+  def expire
+    UserMailer.expire_email(self).deliver
+    destroy
+  end
+
 
 end
