@@ -4,6 +4,10 @@ ADMIN_FIRST_NAME: Paul
 ADMIN_LAST_NAME: Benigeri
 ADMIN_EMAIL: me@benigeri.com
 ADMIN_PASSWORD: changeme
+ADMIN2_FIRST_NAME: Roneil 
+ADMIN2_LAST_NAME: Rumburg
+ADMIN2_EMAIL: roneil@stanford.edu
+ADMIN2_PASSWORD: changeme
 ROLES: [admin, silver, gold, platinum]
 STRIPE_API_KEY: sk_test_HhZUPZzau686IARprLx60c2q 
 STRIPE_PUBLIC_KEY: pk_test_QcZJjkzumy3peALg6uNf5WUn 

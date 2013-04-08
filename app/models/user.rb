@@ -15,13 +15,13 @@ class User < ActiveRecord::Base
 
   attr_accessor :stripe_token, :coupon
 
-  before_save :update_stripe
+  #before_save :update_stripe
   
   def update_stripe
     return if email.include?(ENV['ADMIN_EMAIL'])
     return if email.include?('@example.com') and not Rails.env.production?
     if customer_id.nil?
-      if !stripe_token.present?
+      if stripe_token.present?
         raise "Stripe token not present. Can't create account."
       end
       if coupon.blank?
