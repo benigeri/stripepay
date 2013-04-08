@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
     return if email.include?(ENV['ADMIN_EMAIL'])
     return if email.include?('@example.com') and not Rails.env.production?
     if customer_id.nil?
-      if !stripe_token.present?
-        raise "Stripe token not present. Can't create account."
+      if stripe_token.present?
+        #raise "Stripe token not present. Can't create account."
       end
       if coupon.blank?
         customer = Stripe::Customer.create(
