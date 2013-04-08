@@ -46,7 +46,8 @@
         <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}%>
         <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}%>
       </div>
-      <%= f.hidden_field :name %>
+      <%= f.hidden_field :first_name %>
+      <%= f.hidden_field :last_name %>
       <%= f.hidden_field :email %>
       <%= f.hidden_field :stripe_token %>
       <%= f.submit "Change Credit Card", :class => "btn btn-primary" %>
